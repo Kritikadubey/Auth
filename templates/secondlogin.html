@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="enter-otp">
+    <h2 class="label-otp">We have send the OTP at {{email}}</h2>
+    <input type="number" placeholder="Enter the OTP" class="otp" id="login-otp">
+    <button type="submit" id="login-otp-btn">Next</button>
+</div>    
+{% endblock %}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3FA</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <h1 class="title">Three factor authentication</h1>
+            <img src="../static/images/lock-svgrepo-com.svg" alt="LOCK" class="lock-image">
+        </div>
+        
+    </nav>
+    <div class="main-body">
+        <div class="main-section glass">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+    <script src="../static/js/app.js"></script>
+    <script src="../static/js/log_camera.js"></script>
+    <script src="../static/js/reg_camera.js"></script>
+</body>
+</html>

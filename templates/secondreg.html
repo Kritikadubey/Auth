@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="upload-photo">
+    <h1 class="upload-choice">Upload or Capture Photo</h1>
+    <div class="upload-from-local">
+        <label for="upload-from-local" class="upload-locally">Upload from local:</label>
+        <input type="file" id="fileInput" accept="image/*">
+        <img id="uploadedImage" style="display: none;">
+    </div>
+    <div class="take-photo">
+        <div>
+            <h2 style="display: inline-block;" id="upload-by-clicking">Or capture from camera:</h2>
+            <button id="captureButton" type="button">Capture Photo</button>
+        </div>
+        <video src="" id="video" width="360" height="240" autoplay></video>
+        <canvas id="canvas" width="360" height="240" style="display:none;"></canvas>
+        <img id="capturedImage" alt="Captured Image" style="display:none;">
+    </div>
+</div>
+<div class="faceauth-reg">
+    <button type="button" id="retake-reg" class="retake-reg" style="display: none;">Retake</button>
+    <button type="submit" id="submit-reg" class="submit-reg" style="display: none;">Submmit</button>
+</div>
+{% endblock %}

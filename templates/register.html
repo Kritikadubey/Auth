@@ -1,53 +1,29 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Register Page</title>
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename = 'css/style.css')}}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-  </head>
-  <body class="bg-nav">
-
-  <nav class = "navbar">
-    <a href="" class = "navbar-brand text-light">Registration Page</a>
-  </nav>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8">
-        <h1 class = "text-light display-4 mt-100" style="font-size:75px">Education is the most powerful weapon which we can use to change the world.</h1>
-      </div>
-      <div class="col-md-4" >
-        <div class="card mt-100"  class="input-field">
-          <div class = "card-body">
-            <form class = "form">
-                <label>Name</label><br>
-              <input type="text" class="form-control"><br>
-              <i class="uil uil-envelope icon"></i>
-              <label>Email</label><br>
-              <input type="email" class="form-control"><br>
-               <i class="uil uil-eye-slash showHidePw"></i>
-
-              <label>Password</label><br>
-              <input type="password" class="form-control"><br>
-              <button value="Login" class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
-            </form>
-            <p class="mt-2">Already a member?<a href="/">&nbsp;Login</a> </p>
-          </div>
-      </div>
-  </div>
-
-
-
-
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
-
-
-   </body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+<div class="option">
+    <h1 class="login"><a href="./login" >LOGIN</a></h1>
+    <h1 class="signup"><a href="./register" >SIGN UP</a></h1>
+</div>
+<input type="text" placeholder="name" class="name" id = "reg-name" name="name" !required style="margin-top: 1rem;">
+<input type="email" placeholder="e.g. xyz@gmail.com" class="email" id = "reg-email" name="email" !required style="margin-top: 1rem;">
+<input type="password" placeholder="password" class="password" id = "reg-password" name="password" !required style="margin-top: 1rem;">
+<div class="education">
+    <select name="edu" id="edu" class="edu">
+        <option value="Under Graduate">Under Graduate</option>
+        <option value="Post Graduate">Post Graduate</option>
+        <option value="phd">phd</option>
+        <option value="Graduate">Graduate</option>
+    </select>
+</div>
+<div class="profession">
+    <input type="radio" id="prof1" name="profession" value="student">
+    <label for="student">Student</label><br>
+    <input type="radio" id="prof2" name="profession" value="teacher">
+    <label for="teacher">Teacher</label><br>
+</div>
+<div class="dob">
+    <label for="birthday">DOB:</label>
+    <input type="date" id="birthday" name="birthday">
+</div>
+<button class="register" id="register">Sign up</button>
+{% endblock %}

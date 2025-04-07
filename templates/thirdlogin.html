@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="upload-photo">
+    <div class="upload-from-local">
+        <img id="uploadedImageLog" style="display: none;">
+    </div>
+    <div class="take-photo">
+        <div>
+            <h2 style="display: inline-block;" id="upload-log">Take a photo of face:</h2>
+            <button id="captureButtonLog" type="button">Capture Photo</button>
+        </div>
+        <video src="" id="video-log" width="360" height="240" autoplay></video>
+        <canvas id="canvas-log" width="360" height="240" style="display:none;"></canvas>
+        <img id="capturedImage" alt="Captured Image" style="display:none;">
+    </div>
+</div>
+<div class="faceauth-reg">
+    <button type="button" id="retake-log" class="retake-reg" style="display: none;">Retake</button>
+    <button type="submit" id="submit-log" class="submit-reg" style="display: none;">Submmit</button>
+</div>
+{% endblock %}
