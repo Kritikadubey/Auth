@@ -221,3 +221,4 @@ def validate_otp(email, input_otp):
 if __name__ == "__main__":
     check_and_create_database()
     check_and_create_table()
+#python file
